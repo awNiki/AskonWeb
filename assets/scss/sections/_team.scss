@@ -1,0 +1,72 @@
+#team {
+    width: 100%;
+    text-align: center;
+    padding: 110px 0;
+    h2 {
+        color: black;
+        @include font-style(40px, 500, 50px, 0.01em);
+        span {
+            color: $secondary-color;
+        }
+    }
+
+    p {
+        @include font-style(17px, 500, 23px, 0);
+        color: #666666;
+        margin: 20px 0 40px 0;
+    }
+
+    .slider {
+        display: grid;
+        grid-template-columns: 351px 351px 351px 351px;
+        column-gap: 30px;
+        justify-content: center;
+
+        .slide {
+            height: 550px;
+            border-radius: 20px;
+            border: 1px solid gray;
+            position: relative;
+            overflow: hidden;
+
+            .description {
+                display: none;
+                position: absolute;
+                text-align: center;
+                background-color: #F6F7FB;
+                width: 100%;
+              
+                p {
+                    &:first-of-type {
+                        color: black;
+                        @include font-style(20px, 500, 20px, 0.01em);
+                    }
+
+                    &:last-of-type {
+                        color: #666666;
+                        @include font-style(17px, 500, 17px, 0.01em);
+                    }
+                }
+            }
+
+            &:hover {
+                .description {
+                    display: block;
+                    bottom: 0;
+                   
+                    animation: zoom-in-span 0.5s ease-out;
+                @keyframes zoom-in-span {
+                    0% {
+                    transform: scale(0, 0);
+                    bottom: 50%;
+                    }
+                    100% {
+                    transform: scale(1, 1);
+                    bottom: 0;
+                    }
+                } 
+                }
+            }
+        }
+    }
+}

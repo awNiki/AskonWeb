@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $primary-color;
+    font-family: 'Catamaran', sans-serif;
+
+    a {
+        text-decoration: none;
+        color: $primary-color;
+        cursor: pointer;
+    }
+
+}

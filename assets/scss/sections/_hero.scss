@@ -1,0 +1,59 @@
+#hero {
+    width: 100%;
+    position: relative;
+    top: -40px;
+    height: 100vh;
+   // @include background-image(url("https://demo26.atiframe.com/wp-content/uploads/revslider/slider-1060px/slide_bak1.jpg"));
+   background-color: black;
+    display: flex;
+    align-items: center;
+    
+
+    .headline {
+        text-align: left;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1117px;
+        padding-left: 15px;
+       
+
+        h1 {
+            color: $primary-color;
+            @include font-style(80px, 900, 90px, 0);
+            width: 100%;
+            max-width: 800px;
+            span:first-of-type {
+                display: block;
+                color: $secondary-color;
+                animation: zoom-in-span 1s ease-out;
+                @keyframes zoom-in-span {
+                    0% {
+                    transform: scale(0, 0);
+                    }
+                    100% {
+                    transform: scale(1, 1);
+                    }
+                } 
+            } 
+           
+        }
+
+        p {
+           @include font-style(20px, 400, 27px, 0);
+           padding-right: 200px;
+           margin: 25px 0 35px 0;
+           width: 100%;
+           max-width: 800px;
+        }
+
+        a {
+            &:hover{
+                background: $primary-color;
+                border: 2px solid $primary-color;
+                color: $secondary-color;
+            }
+        }
+
+       
+    }
+}

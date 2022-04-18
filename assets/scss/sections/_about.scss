@@ -1,0 +1,43 @@
+#about {
+    background-color: $primary-color;
+    padding: 110px 300px 110px 0;
+    display: flex;
+    justify-content: space-between;
+
+    .img-holder {
+        width: 50%;
+        max-width: 555px;
+        border: 1px solid black;
+       
+    }
+
+    .text {
+        width: 50%;
+        text-align: left;
+
+        h2{
+            color: black;
+            @include font-style(40px, 500, 45px, 0.01em);
+            span {
+                color: $secondary-color;
+            }
+        }
+    
+        p {
+            @include font-style(17px, 500, 23px, 0);
+            color: #666666;
+    
+            &:first-of-type {
+                margin: 30px 0;
+                color: black;
+                @include font-style(25px, 500, 30px, 0);
+            }
+        }
+        a {
+            margin: 30px 0 0 0;
+            color: black;
+            padding: 15px 0;
+        }
+    }
+  
+}

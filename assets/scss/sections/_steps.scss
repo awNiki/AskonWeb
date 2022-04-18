@@ -1,0 +1,90 @@
+#steps {
+    width: 100%;
+    padding: 110px 0;
+    text-align: center;
+
+    h2 {
+        color: black;
+        @include font-style(40px, 500, 50px, 0.01em);
+        span {
+            color: $secondary-color;
+        }
+    }
+
+    p {
+        @include font-style(17px, 500, 23px, 0);
+        color: #666666;
+        width: 100%;
+        max-width: 500px;
+        margin: 20px auto 40px auto;
+    }
+
+    .steps {
+        @include background-image(url("../img/steps.png"));
+        height: 284px;
+        width: 100%;
+        max-width: 1170px;
+        margin: 0 auto;
+        background-size: contain;
+        display: flex;
+        position: relative;
+        overflow: hidden;
+
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+
+            &[data-id="1"]{
+                top: -200px;
+                left: 84px;
+            }
+            &[data-id="2"]{
+                bottom: -200px;
+                left: 345px;
+            }
+            &[data-id="3"]{
+                top: -200px;
+                left: 533px;
+            }
+            &[data-id="4"]{
+                bottom: -200px;
+                right: 345px;
+            }
+            &[data-id="5"]{
+                bottom: -160px;
+                right: 0;
+            }
+
+            span {
+                font-size: 30px;
+                font-weight: 600;
+                color: #80808099;
+                line-height: 25px;
+                
+            }
+            h3 {
+                font-size: 20px;
+                color: black;
+                font-weight: 500;
+            }
+            .svg-holder {
+                position: relative;
+                z-index: 22;
+                background-color: $primary-color;
+                width: 70px;
+                height: 70px;
+                margin: 15px 0;
+                border-radius: 100%;
+                border: 2px solid $secondary-color;
+                display: grid;
+                align-items: center;
+                justify-content: center;
+
+                
+            }
+        }
+    }
+}

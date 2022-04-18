@@ -1,0 +1,22 @@
+#scroller {
+    position: fixed;
+    bottom: 50px;
+    right: 60px;
+    background-color: rgba(0,0,0,0.5);
+    filter: alpha(opacity=50);
+    color: #FFFFFF;
+    transition: all 500ms;
+    width: 60px;
+    height: 60px;
+    border-radius: 80px;
+    text-align: center;
+    padding-top: 18px;
+    z-index: 1050;
+    cursor: pointer;
+    &.hidden {
+        display: none;
+    }
+    svg {
+        width: 22px;
+    }
+}

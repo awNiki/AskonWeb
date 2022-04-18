@@ -1,0 +1,49 @@
+$breakpoints: (
+    "small-mobile": 440px,
+    "large-mobile": 480px,
+    "small-tablet": 768px,
+    "large-tablet": 1024px,
+    "small-screen": 1366px,
+) !default;
+
+//Media queries
+@mixin breakpoint($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (max-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    } @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+          + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+
+//Add classes for different breakpoints if needed
+@mixin desktop {
+    html {
+        &.desktop {
+            @content;
+        }
+    }
+}
+
+@mixin tablet {
+    html {
+        &.tablet {
+            @content;
+        }
+    }
+}
+
+@mixin mobile {
+    html {
+        &.mobile {
+            @content;
+        }
+    }
+}
+
+//Responsive font size
+@mixin font-size($fs) {
+    font-size: calc(#{$fs} + 6 * ((100vw - 320px) / 680));
+}
